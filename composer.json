@@ -1,0 +1,15 @@
+{
+    "name": "gyvastis/article-rewriter-api",
+    "description": "Paraphrases submited article, essay or any other piece of writing.",
+    "type": "api",
+    "authors": [
+        {
+            "name": "Vaidas",
+            "email": "shibalba1@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0",
+        "curl/curl": "^1.2"
+    }
+}
