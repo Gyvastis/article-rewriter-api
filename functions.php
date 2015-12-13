@@ -1,6 +1,6 @@
 <?php
 
-function spin_article($text){
+function spin_article($text_to_spin, $include_capitalized = false){
 
     $client = new \Goutte\Client();
     $spinner_url = 'http://paraphrasing-tool.com/';
@@ -29,5 +29,12 @@ function spin_article($text){
         return false;
     }
 
-    
+    $crawler = $client->submit($crawler->selectButton('Go!')->form(), [
+        'math_captcha_answer' => $math_captcha_result,
+        'formNameLabelTextBefore' => $text_to_spin,
+        'formNameLabelSpinCapWords' => $include_capitalized
+    ]);
+
+    return $crawler->filter('#formNameLabelTextAfter')->first()->text();
+
 }

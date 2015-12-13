@@ -25,16 +25,22 @@ $app->post('/rewrite', function(\Slim\Http\Request $request, \Slim\Http\Response
         }
         else{
             $request_text = $request_params['text'];
-            $request_text = preg_replace('/[^0-9a-z-\.,\?!\(\)\s\n\r]/i', '', $request_text);
-            $response_params['data'] = $request_text;
+//            $request_text = preg_replace('/[^0-9a-z-\.,\?!\(\)\s\n\r]/i', '', $request_text);
+            $request_include_capitalized = isset($response_params['include_capitalized']) ? $response_params['include_capitalized'] : false;
+            $rewritten_text = spin_article($request_text, $request_include_capitalized);
+
+            if( ! $rewritten_text){
+                $response_params['message'] = 'Rewriting failed';
+            }
+            else{
+                $response_params['success'] = true;
+                $response_params['data']['rewritten_text'] = $rewritten_text;
+                $response_params['data']['include_capitalized'] = $request_include_capitalized;
+            }
         }
     }
 
     return $response->withJson($response_params);
-});
-
-$app->post('/test', function(\Slim\Http\Request $request, \Slim\Http\Response $response){
-    $spun_article = spin_article('My pleasure Kim. Please spread the word about the list through the independent bookstores. I know that many of the independent bookstores have blogs or websites. Thank you for your reviews of Indie books. I love you very much. I am fine.');
 });
 
 $app->run();
