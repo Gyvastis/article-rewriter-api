@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 $app = new Slim\App();
 
@@ -31,6 +31,10 @@ $app->post('/rewrite', function(\Slim\Http\Request $request, \Slim\Http\Response
     }
 
     return $response->withJson($response_params);
+});
+
+$app->post('/test', function(\Slim\Http\Request $request, \Slim\Http\Response $response){
+    $spun_article = spin_article('My pleasure Kim. Please spread the word about the list through the independent bookstores. I know that many of the independent bookstores have blogs or websites. Thank you for your reviews of Indie books. I love you very much. I am fine.');
 });
 
 $app->run();

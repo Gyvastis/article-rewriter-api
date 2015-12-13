@@ -10,6 +10,10 @@
     ],
     "require": {
         "slim/slim": "^3.0",
-        "curl/curl": "^1.2"
+        "fabpot/goutte": "^3.1",
+        "symfony/css-selector": "^3.0"
+    },
+    "autoload": {
+        "files": ["functions.php"]
     }
 }
