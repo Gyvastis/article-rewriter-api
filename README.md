@@ -14,7 +14,7 @@ Example `POST` request to `http://yourawesomehost.com/article-rewriter-api/rewri
     "text":"My pleasure Kim. Please spread the word about the list through the independent bookstores. I know 
 that many of the independent bookstores have blogs or websites. Thank you for your reviews of Indie books. 
 What do you think of that amazing journey?",
-    "include_capitalized": false
+    "include_capitalized": true
 }
 ```
 
