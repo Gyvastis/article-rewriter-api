@@ -35,7 +35,6 @@ $app->post('/rewrite', function(\Slim\Http\Request $request, \Slim\Http\Response
             else{
                 $response_params['success'] = true;
                 $response_params['data']['rewritten_text'] = $rewritten_text;
-                $response_params['data']['include_capitalized'] = $request_include_capitalized;
             }
         }
     }
