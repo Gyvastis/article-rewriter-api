@@ -13,7 +13,7 @@ Example `POST` request to `http://yourawesomehost.com/article-rewriter-api/rewri
 {
     "text":"My pleasure Kim. Please spread the word about the list through the independent bookstores. I know 
 that many of the independent bookstores have blogs or websites. Thank you for your reviews of Indie books. 
-I love you all very much.",
+What do you think of that amazing journey?",
     "include_capitalized": false
 }
 ```
@@ -24,10 +24,10 @@ Example `JSON` response:
     "success": true,
     "message": "Image processed successfully",
     "data": {
-        "rewritten_text": "My pleasure Kim. If it's not too much trouble spread the news about the rundown 
-through the free book shops. I realize that a large portion of the autonomous book shops have online journals 
-or sites. Much obliged to you for your audits of Indie books. I cherish all of you all that much.",
-        "include_capitalized": false
+        "rewritten_text": "My pleasure Kim. It would be ideal if you spread the news about the rundown 
+through the autonomous book shops. I realize that a hefty portion of the autonomous book shops have web 
+journals or sites. Much obliged to you for your audits of Indie books. What do you think about that 
+stunning trip?"
     }
 }
 ```
