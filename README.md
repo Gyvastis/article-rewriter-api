@@ -22,7 +22,7 @@ Example `JSON` response:
 ```json
 {
     "success": true,
-    "message": "Image processed successfully",
+    "message": "Text rewritten successfully",
     "data": {
         "rewritten_text": "My pleasure Kim. It would be ideal if you spread the news about the rundown through 
 the autonomous book shops. I realize that a hefty portion of the autonomous book shops have web journals or 
