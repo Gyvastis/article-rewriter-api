@@ -1,5 +1,5 @@
 # article-rewriter-api
-Paraphrases submited article, essay or any other piece of writing.
+Paraphrases submited article, essay or any other piece of writing. A.K.A. article spinner.
 
 ## Usage
 Install composer components `composer install`
