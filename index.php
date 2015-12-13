@@ -34,6 +34,7 @@ $app->post('/rewrite', function(\Slim\Http\Request $request, \Slim\Http\Response
             }
             else{
                 $response_params['success'] = true;
+                $response_params['message'] = 'Text rewritten successfully';
                 $response_params['data']['rewritten_text'] = $rewritten_text;
             }
         }
