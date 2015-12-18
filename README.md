@@ -33,3 +33,7 @@ sites. Much obliged to you for your audits of Indie books. What do you think abo
 
 ### Note
 Use this at your own risk, as it depends on a third party. Consider using a proxy too.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Gyvastis/article-rewriter-api/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
