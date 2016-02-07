@@ -4,7 +4,11 @@ Paraphrases submited article, essay or any other piece of writing. A.K.A. articl
 After investigating many article spinners, I have discovered one which produces the most comprehensible content of all and made an API wrapper for it.
 
 ## Usage
-Install composer components `composer install`
+`$ git clone https://github.com/Gyvastis/article-rewriter-api.git`
+
+`$ cd article-rewriter-api`
+
+`$ composer install`
 
 Request must be in `application/json`
 
@@ -33,3 +37,7 @@ sites. Much obliged to you for your audits of Indie books. What do you think abo
 
 ### Note
 Use this at your own risk, as it depends on a third party. Consider using a proxy too.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Gyvastis/article-rewriter-api/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
