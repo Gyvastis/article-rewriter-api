@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        div {
+            width: 100%;
+        }
+        div textarea {
+            float: left;
+            width: 45%;
+            height: 250px;
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <textarea class="needs-rewrite">
+
+        </textarea>
+        <textarea class="rewritten">
+
+        </textarea>
+    </div>
+    <button class="rewrite">Rewrite</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+        var rewriteArticle = function(e){
+            $.ajax({
+                url: "http://localhost/~vaidas/article-rewriter-api/rewrite",
+                data: { 'text': $('.needs-rewrite').val() },
+                dataType: 'JSON',
+                type: 'POST'
+            }).done(function(result){
+                $('.rewritten').val(result.data.rewritten_text);
+            });
+        };
+        $('.rewrite').on('click', rewriteArticle);
+    </script>
+</body>
+</html>
